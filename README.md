@@ -15,6 +15,9 @@ specified are working.
         * Horses (Collecting a sires offspring is not done yet, a login is required)
         * Results
 * Belgium 
+    * [Belgische Federatie voor Paardenwedrennen](https://www.trotting.be/)
+        * Entries
+        * Results
 * Canada
 * Denmark
 * Finland

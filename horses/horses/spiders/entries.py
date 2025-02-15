@@ -1,7 +1,7 @@
 import scrapy
 from horses.response_handlers.australia.entries import AustraliaCalendar
+from horses.response_handlers.belgium.entries import BelgiumCalendar
 
-# from horses.response_handlers.belgium.entries import BelgiumCalendar
 # from horses.response_handlers.canada.entries import CanadaCalendar
 # from horses.response_handlers.denmark.entries import DenmarkCalendar
 # from horses.response_handlers.finland.entries import FinlandCalendar
@@ -26,7 +26,7 @@ class EntriesSpider(scrapy.Spider):
 
         self.handler = {
             "australia": AustraliaCalendar,
-            # "belgium": BelgiumCalendar,
+            "belgium": BelgiumCalendar,
             # "canada": CanadaCalendar,
             # "denmark": DenmarkCalendar,
             # "finland": FinlandCalendar,
