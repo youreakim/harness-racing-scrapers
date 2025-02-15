@@ -132,10 +132,14 @@ def parse_horse_info(response: Response, horse: ItemLoader) -> None:
 
     horse.add_value("horse_info", horse_info.load_item())
 
-    registration = ItemLoader(item=AustralianRegistration())
+    registration = ItemLoader(
+        item=AustralianRegistration(), selector=horse_info.selector
+    )
 
     registration.add_value("source", "ab")
     registration.add_value("link", response.url)
+
+    registration.add_xpath("name", ".//td[@class='horseName']")
 
     horse.add_value("registrations", registration.load_item())
 

@@ -51,7 +51,7 @@ class AustraliaHorseSearch:
 class AustraliaHorse:
     def __init__(self, horse_id: str, filly: bool) -> None:
         self.requests = [
-            # (scrapy.Request, {"url": f"{BASE_URL}/performance/{horse_id}"}),
+            (scrapy.Request, {"url": f"{BASE_URL}/performance/{horse_id}"}),
             (scrapy.Request, {"url": f"{BASE_URL}/pedigree/{horse_id}"}),
             (scrapy.Request, {"url": f"{BASE_URL}/start.cfm?horse_id={horse_id}"}),
         ]

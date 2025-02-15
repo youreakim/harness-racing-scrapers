@@ -81,7 +81,7 @@ class HorseSpider(scrapy.Spider):
         horse_handler.handle_response(response)
 
         if len(horse_handler.requests) == 0:
-            print(horse_handler.return_horse())
+            yield horse_handler.return_horse()
 
         else:
             req, req_params = horse_handler.requests.pop(0)
