@@ -19,6 +19,9 @@ specified are working.
         * Entries
         * Results
 * Canada
+    * [Standardbred Canada](http://standardbredcanada.ca/)
+        * Entries
+        * Results
 * Denmark
 * Finland
 * France
@@ -68,7 +71,7 @@ Navigate horses directory containing the `scrapy.cfg` file.
 
 To search for a horse by name
 ```
-scrapy crawl horse -a country=australia -a name='just believe'
+scrapy crawl horse -a country=australia -a horse_name='just believe'
 ```
 
 To get all available entries

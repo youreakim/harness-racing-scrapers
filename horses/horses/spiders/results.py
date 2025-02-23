@@ -4,8 +4,8 @@ import arrow
 import scrapy
 from horses.response_handlers.australia.results import AustraliaCalendar
 from horses.response_handlers.belgium.results import BelgiumCalendar
+from horses.response_handlers.canada.results import CanadaCalendar
 
-# from horses.response_handlers.canada.results import CanadaCalendar
 # from horses.response_handlers.denmark.results import DenmarkCalendar
 # from horses.response_handlers.finland.results import FinlandCalendar
 # from horses.response_handlers.france.results import FranceCalendar
@@ -49,7 +49,7 @@ class ResultSpider(scrapy.Spider):
         self.handler = {
             "australia": AustraliaCalendar,
             "belgium": BelgiumCalendar,
-            # "canada": CanadaCalendar,
+            "canada": CanadaCalendar,
             # "denmark": DenmarkCalendar,
             # "finland": FinlandCalendar,
             # "france": FranceCalendar,

@@ -21,10 +21,11 @@ from horses.response_handlers.australia.horse import AustraliaHorseSearch
 class HorseSpider(scrapy.Spider):
     name = "horse"
 
-    def __init__(self, country: str, name: str, *args: Any, **kwargs: Any):
-        super().__init__(name, *args, **kwargs)
+    def __init__(self, country: str, horse_name: str, *args: Any, **kwargs: Any):
+        super().__init__(*args, **kwargs)
 
-        self.name = name
+        self.horse_name = horse_name
+        self.country = country
         self.handler = {
             "australia": AustraliaHorseSearch,
             # "belgium": BelgiumHorseSearch,
@@ -40,7 +41,7 @@ class HorseSpider(scrapy.Spider):
             # "spain": SpainHorseSearch,
             # "sweden": SwedenHorseSearch,
             # "usa": USHorseSearch,
-        }[country](self.name)
+        }[country](self.horse_name)
 
         self.allowed_domains = self.handler.allowed_domains
 
