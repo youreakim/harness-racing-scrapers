@@ -23,6 +23,10 @@ specified are working.
         * Entries
         * Results
 * Denmark
+    * [Dansk Travsports Centralforbund (DTC)](https://travinfo.dk/)
+        * Horses
+        * Entries
+        * Results
 * Finland
 * France
 * Germany
