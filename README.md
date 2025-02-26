@@ -28,6 +28,10 @@ specified are working.
         * Entries
         * Results
 * Finland
+    * [Suomen Hippos ry](http://www.hippos.fi/)
+        * Horses
+        * Entries
+        * Results
 * France
 * Germany
 * Holland
