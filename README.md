@@ -33,6 +33,14 @@ specified are working.
         * Entries
         * Results
 * France
+    * [Trotteur Francais](https://www.letrot.com/)
+        * Horses
+        * Entries
+        * Results
+    * [IFCE](https://infochevaux.ifce.fr/fr/info-chevaux)
+        * Horses
+    * [Pedigrees et Qualifications](http://trot-pedigree.net/)
+        * Horses
 * Germany
 * Holland
 * Italy

@@ -7,8 +7,8 @@ from horses.response_handlers.belgium.results import BelgiumCalendar
 from horses.response_handlers.canada.results import CanadaCalendar
 from horses.response_handlers.denmark.results import DenmarkCalendar
 from horses.response_handlers.finland.results import FinlandCalendar
+from horses.response_handlers.france.results import FranceCalendar
 
-# from horses.response_handlers.france.results import FranceCalendar
 # from horses.response_handlers.germany.results import GermanyCalendar
 # from horses.response_handlers.holland.results import HollandCalendar
 # from horses.response_handlers.italy.results import ItalyCalendar
@@ -52,7 +52,7 @@ class ResultSpider(scrapy.Spider):
             "canada": CanadaCalendar,
             "denmark": DenmarkCalendar,
             "finland": FinlandCalendar,
-            # "france": FranceCalendar,
+            "france": FranceCalendar,
             # "germany": GermanyCalendar,
             # "holland": HollandCalendar,
             # "italy": ItalyCalendar,

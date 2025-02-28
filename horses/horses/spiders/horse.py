@@ -4,10 +4,10 @@ import scrapy
 from horses.response_handlers.australia.horse import AustraliaHorseSearch
 from horses.response_handlers.denmark.horse import DenmarkHorseSearch
 from horses.response_handlers.finland.horse import FinlandHorseSearch
+from horses.response_handlers.france.horse import FranceHorseSearch
 
 # from horses.response_handlers.belgium.horse import BelgiumHorseSearch
 # from horses.response_handlers.canada.horse import CanadaHorseSearch
-# from horses.response_handlers.france.horse import FranceHorseSearch
 # from horses.response_handlers.germany.horse import GermanyHorseSearch
 # from horses.response_handlers.holland.horse import HollandHorseSearch
 # from horses.response_handlers.italy.horse import ItalyHorseSearch
@@ -32,7 +32,7 @@ class HorseSpider(scrapy.Spider):
             # "canada": CanadaHorseSearch,
             "denmark": DenmarkHorseSearch,
             "finland": FinlandHorseSearch,
-            # "france": FranceHorseSearch,
+            "france": FranceHorseSearch,
             # "germany": GermanyHorseSearch,
             # "holland": HollandHorseSearch,
             # "italy": ItalyHorseSearch,
