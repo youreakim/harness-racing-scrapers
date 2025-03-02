@@ -42,6 +42,10 @@ specified are working.
     * [Pedigrees et Qualifications](http://trot-pedigree.net/)
         * Horses
 * Germany
+    * [Hauptverband für Traberzucht](https://www.hvtonline.de/)
+        * Horses
+        * Entries
+        * Results
 * Holland
 * Italy
 * New Zealand
