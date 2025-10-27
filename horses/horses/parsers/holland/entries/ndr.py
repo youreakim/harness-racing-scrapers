@@ -12,9 +12,11 @@ from horses.items.holland import (
     DutchRegistration,
 )
 from itemloaders import ItemLoader
+from parsel import Selector
+from scrapy.http.response import Response
 
 
-def parse_calendar(response):
+def parse_calendar(response: Response) -> list[dict]:
     racedays = []
 
     for row in response.xpath('//div[@id="ndr-search-results"]//li'):
@@ -42,15 +44,11 @@ def parse_calendar(response):
     return racedays
 
 
-def parse_raceday_info(response, raceday):
+def parse_raceday_info(response: Response, raceday: ItemLoader) -> None:
     for race_section in response.xpath(
         '//div[contains(@id,"ndr-tab-") and .//span[contains(text(),"Drafsport")]]'
     ):
         race = parse_race(race_section)
-
-        # race_link = ItemLoader(item=DutchRaceLink(), selector='')
-        #
-        # race.add_value('links', race_link.load_item())
 
         for starter_row in race_section.xpath(".//tr[@data-id]"):
             parse_starter(starter_row, race)
@@ -58,7 +56,7 @@ def parse_raceday_info(response, raceday):
         raceday.add_value("races", race.load_item())
 
 
-def parse_raceday(selector):
+def parse_raceday(selector: Selector) -> ItemLoader:
     raceday = ItemLoader(item=DutchRaceday())
 
     raceday_info = ItemLoader(item=DutchRacedayInfo(), selector=selector)
@@ -79,7 +77,7 @@ def parse_raceday(selector):
     return raceday
 
 
-def parse_race(selector):
+def parse_race(selector: Selector) -> ItemLoader:
     race = ItemLoader(item=DutchRace())
 
     race_info = ItemLoader(item=DutchRaceInfo(), selector=selector)
@@ -107,7 +105,7 @@ def parse_race(selector):
     return race
 
 
-def parse_starter(selector, race):
+def parse_starter(selector: Selector, race: ItemLoader) -> None:
     race_starter = ItemLoader(item=DutchRaceStarter())
 
     starter_info = ItemLoader(item=DutchRaceStarterInfo(), selector=selector)

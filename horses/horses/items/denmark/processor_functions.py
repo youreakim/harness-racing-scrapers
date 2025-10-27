@@ -21,7 +21,7 @@ def handle_name(name: str) -> str:
 
 def handle_country(country: str) -> str:
     if "(" in country:
-        return country[country.find("(") + 1 : country.find(")")]
+        return country[country.find("(") + 1: country.find(")")]
 
     return "DK"
 
@@ -80,19 +80,24 @@ def handle_racetype(racetype: str) -> str:
 
 
 def get_racenumber(num_string: str) -> str:
-    return num_string[num_string.find("Løb ") + 4 : num_string.find(".")]
+    return num_string[num_string.find("Løb ") + 4: num_string.find(".")]
 
 
 def calculate_purse(purse_string: str) -> int:
+    if isinstance(purse_string, list):
+        if len(purse_string) == 0:
+            return 0
+        purse_string = purse_string[0]
+
     if "(" in purse_string:
         purse_string = purse_string[
-            purse_string.find(":") + 1 : purse_string.find(" (")
+            purse_string.find(":") + 1: purse_string.find(" (")
         ]
     elif "samt" in purse_string:
         purse_string = purse_string.replace(" samt ", "-")
 
         purse_string = purse_string[
-            purse_string.find(":") + 1 : purse_string.find(" ", purse_string.rfind("-"))
+            purse_string.find(":") + 1: purse_string.find(" ", purse_string.rfind("-"))
         ]
 
     return sum(int(x.replace(".", "")) for x in purse_string.split("-"))

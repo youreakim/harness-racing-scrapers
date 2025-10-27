@@ -26,9 +26,11 @@ def parse_calendar(response: Response) -> list[dict]:
     for raceday_json in response_json:
         raceday = parse_raceday(raceday_json)
 
-        url = f"https://api.danskhv.dk/webapi/trot/raceinfo/{raceday.get_output_value('links')[0]['link']}/startlists"
+        url = f"https://api.danskhv.dk/webapi/trot/raceinfo/{
+            raceday.get_output_value('links')[0]['link']}/startlists"
 
-        key = f"{raceday.get_output_value('raceday_info')['date']}_{raceday.get_output_value('raceday_info')['racetrack']}"
+        key = f"{raceday.get_output_value('raceday_info')['date']}_{
+            raceday.get_output_value('raceday_info')['racetrack']}"
 
         racedays.append({"raceday": raceday, "url": url, "key": key})
 
@@ -58,7 +60,8 @@ def parse_raceday(raceday_json: dict) -> ItemLoader:
     raceday_info.add_value("date", raceday_json["raceDayDate"])
     raceday_info.add_value("racetrack", raceday_json["trackName"])
     raceday_info.add_value("country", "Denmark")
-    raceday_info.add_value("collection_date", arrow.utcnow().date().isoformat())
+    raceday_info.add_value(
+        "collection_date", arrow.utcnow().date().isoformat())
     raceday_info.add_value("status", "entries")
 
     raceday.add_value("raceday_info", raceday_info.load_item())
@@ -100,15 +103,17 @@ def parse_race(race_json: dict) -> ItemLoader:
     if race_info.get_output_value("racetype") == "race":
         race_info.add_value(
             "purse",
-            [x["text"] for x in race_json["propTexts"] if x["typ"] == "P"][0],
+            [x["text"] for x in race_json["propTexts"] if x["typ"] == "P"]
         )
         race_info.add_value(
             "racename",
-            [x.get("text", "") for x in race_json["propTexts"] if x["typ"] == "L"],
+            [x.get("text", "")
+             for x in race_json["propTexts"] if x["typ"] == "L"],
         )
         race_info.add_value(
             "conditions",
-            [x["text"] for x in race_json["propTexts"] if x["typ"] not in ["U", "L"]],
+            [x["text"]
+                for x in race_json["propTexts"] if x["typ"] not in ["U", "L"]],
         )
 
     race.add_value("race_info", race_info.load_item())

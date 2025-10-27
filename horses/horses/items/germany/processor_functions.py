@@ -50,7 +50,7 @@ def remove_title(value: str) -> str:
     value = remove_tags(value)
 
     if ":" in value:
-        value = value[value.find(":") + 1 :]
+        value = value[value.find(":") + 1:]
 
     return value.strip()
 
@@ -73,10 +73,10 @@ def handle_country(name: str) -> str | None:
     country = "DE"
 
     if "(" in name:
-        country = name[name.find("(") + 1 : name.find(")")]
+        country = name[name.find("(") + 1: name.find(")")]
 
     elif "[" in name:
-        country = name[name.find("[") + 1 : name.find("]")]
+        country = name[name.find("[") + 1: name.find("]")]
 
     if len(country) == 2:
         return country
@@ -112,7 +112,7 @@ def handle_distance(distance: str | int) -> int:
     distance = remove_tags(distance)
 
     if ":" in distance:
-        distance = distance[distance.find(":") + 1 :]
+        distance = distance[distance.find(":") + 1:]
 
     if "/" in distance:
         distance = distance[: distance.find("/")]
@@ -133,7 +133,7 @@ def handle_racepurse(purse: str | int) -> int:
         purse = purse[: purse.find("€")]
 
     if ":" in purse:
-        purse = purse[purse.find(":") + 1 :]
+        purse = purse[purse.find(":") + 1:]
 
     return int(purse.replace(".", "").strip())
 
@@ -223,7 +223,8 @@ def handle_purse(purse_string: str | int) -> int:
     if isinstance(purse_string, int):
         return purse_string
 
-    purse_string = remove_tags(purse_string).replace(".", "").replace("€", "").strip()
+    purse_string = remove_tags(purse_string).replace(
+        ".", "").replace("€", "").strip()
 
     return int(purse_string) if purse_string.isnumeric() else 0
 
@@ -242,13 +243,13 @@ def handle_startnumber(number: str | int) -> int | None:
 def handle_racedate(date_string: str) -> str | None:
     date_string = remove_tags(date_string).strip()
 
-    if "." in date_string:
-        return arrow.get(date_string, "DD.MM.YYYY").format("YYYY-MM-DD")
-
     if "/" in date_string:
         date_string = date_string.split("/")[-2]
 
         return arrow.get(date_string, "YYYYMMDD").format("YYYY-MM-DD")
+
+    if "." in date_string:
+        return arrow.get(date_string, "DD.MM.YYYY").format("YYYY-MM-DD")
 
     return None
 
@@ -269,7 +270,7 @@ def handle_raceday_country(racetrack: str) -> str:
     racetrack = remove_tags(racetrack).strip()
 
     if "(" in racetrack:
-        return racetrack[racetrack.find("(") + 1 : racetrack.find(")")]
+        return racetrack[racetrack.find("(") + 1: racetrack.find(")")]
 
     return "Germany"
 
@@ -294,7 +295,7 @@ def handle_link(link: str) -> str:
     link = remove_tags(link)
 
     if ":" in link:
-        link = link[link.find(":") + 1 :]
+        link = link[link.find(":") + 1:]
 
     return link
 
