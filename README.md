@@ -52,6 +52,22 @@ specified are working.
         * Entries
         * Results
 * Italy
+    * These scrapers are in a somewhat working state, they will be improved at a later point.
+    * [Unire](https://www.unire.gov.it/)
+        * Links to horses from entries and results are unreliable, some have no links, on other occasions multiple horses have had the same link.
+        * Horses
+        * Entries
+        * Results
+    * [Associazione Nazionale Allevatori Cavallo Trottatore](https://www.anact.it/)
+        * Foreign horses are given a link with no horse id in entries or results, but they are present in the database, just do a name search for the horse.
+        * Horses
+        * Entries
+        * Results
+    * [Trottoweb](https://trottoweb.it/)
+        * Results
+        * Entries
+    * [Snai](https://ippica.snai.it/)
+        * Results (basically just collecting odds)
 * New Zealand
 * Norway
 * Spain
