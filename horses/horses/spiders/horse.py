@@ -8,10 +8,10 @@ from horses.response_handlers.france.horse import FranceHorseSearch
 from horses.response_handlers.germany.horse import GermanyHorseSearch
 from horses.response_handlers.holland.horse import HollandHorseSearch
 from horses.response_handlers.italy.horse import ItalyHorseSearch
+from horses.response_handlers.new_zealand.horse import NZHorseSearch
 
 # from horses.response_handlers.belgium.horse import BelgiumHorseSearch
 # from horses.response_handlers.canada.horse import CanadaHorseSearch
-# from horses.response_handlers.new_zealand.horse import NZHorseSearch
 # from horses.response_handlers.norway.horse import NorwayHorseSearch
 # from horses.response_handlers.spain.horse import SpainHorseSearch
 # from horses.response_handlers.sweden.horse import SwedenHorseSearch
@@ -36,7 +36,7 @@ class HorseSpider(scrapy.Spider):
             "germany": GermanyHorseSearch,
             "holland": HollandHorseSearch,
             "italy": ItalyHorseSearch,
-            # "nz": NZHorseSearch,
+            "new zealand": NZHorseSearch,
             # "norway": NorwayHorseSearch,
             # "spain": SpainHorseSearch,
             # "sweden": SwedenHorseSearch,

@@ -69,6 +69,10 @@ specified are working.
     * [Snai](https://ippica.snai.it/)
         * Results (basically just collecting odds)
 * New Zealand
+    * [Harness Racing New Zealand](https://www.hrnz.co.nz/)
+        * Horses
+        * Entries
+        * Results
 * Norway
 * Spain
 * Sweden
