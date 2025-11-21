@@ -74,6 +74,10 @@ specified are working.
         * Entries
         * Results
 * Norway
+    * [Det Norske Travselskap](https://www.travsport.no/)
+        * Horses
+        * Entries
+        * Results
 * Spain
 * Sweden
 * USA
