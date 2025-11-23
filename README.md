@@ -79,6 +79,13 @@ specified are working.
         * Entries
         * Results
 * Spain
+    * Two sites sharing the same database
+    * [Asociación de Criadores y Propietarios de Caballos Trotadores](https://www.astrot.com/index.php)
+        * Horses (Info, pedigree and starts)
+        * Entries
+        * Results
+    * [FEDERACIÓN ESPAÑOLA DE CARRERAS AL TROTE](https://federaciobaleardetrot.com/index.php)
+        * Horses (Offspring)
 * Sweden
 * USA
 
