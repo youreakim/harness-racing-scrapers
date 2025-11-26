@@ -14,8 +14,8 @@ from horses.response_handlers.italy.results import ItalyCalendar
 from horses.response_handlers.new_zealand.results import NZCalendar
 from horses.response_handlers.norway.results import NorwayCalendar
 from horses.response_handlers.spain.results import SpainCalendar
+from horses.response_handlers.sweden.results import SwedenCalendar
 
-# from horses.response_handlers.sweden.results import SwedenCalendar
 # from horses.response_handlers.usa.results import USCalendar
 from scrapy.http.response import Response
 
@@ -59,7 +59,7 @@ class ResultSpider(scrapy.Spider):
             "new zealand": NZCalendar,
             "norway": NorwayCalendar,
             "spain": SpainCalendar,
-            # "sweden": SwedenCalendar,
+            "sweden": SwedenCalendar,
             # "usa": USCalendar,
         }[country](self.start_date, self.end_date)
 

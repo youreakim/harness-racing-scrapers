@@ -87,7 +87,15 @@ specified are working.
     * [FEDERACIÓN ESPAÑOLA DE CARRERAS AL TROTE](https://federaciobaleardetrot.com/index.php)
         * Horses (Offspring)
 * Sweden
+    * [Svensk Travsport](https://sportapp.travsport.se/start)
+        * Horses
+        * Entries
+        * Results
+    * [ATG](https://www.atg.se/)
+        * Results (basically just collecting odds)
 * USA
+    * [USTrotting](https://ustrotting.com/)
+        * They began updating parts of their site some time ago, when that is finished I will add spiders for entries and results, most of the pedigree information is hidden behind a paywall.
 
 *Please contact the owners of the data if you plan to publish any data collected with these spiders.*
 

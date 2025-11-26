@@ -11,10 +11,10 @@ from horses.response_handlers.italy.horse import ItalyHorseSearch
 from horses.response_handlers.new_zealand.horse import NZHorseSearch
 from horses.response_handlers.norway.horse import NorwayHorseSearch
 from horses.response_handlers.spain.horse import SpainHorseSearch
+from horses.response_handlers.sweden.horse import SwedenHorseSearch
 
 # from horses.response_handlers.belgium.horse import BelgiumHorseSearch
 # from horses.response_handlers.canada.horse import CanadaHorseSearch
-# from horses.response_handlers.sweden.horse import SwedenHorseSearch
 # from horses.response_handlers.usa.horse import USHorseSearch
 
 
@@ -39,7 +39,7 @@ class HorseSpider(scrapy.Spider):
             "new zealand": NZHorseSearch,
             "norway": NorwayHorseSearch,
             "spain": SpainHorseSearch,
-            # "sweden": SwedenHorseSearch,
+            "sweden": SwedenHorseSearch,
             # "usa": USHorseSearch,
         }[country](self.horse_name)
 
